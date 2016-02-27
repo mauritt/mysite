@@ -1,0 +1,143 @@
+html{
+    font-size: 16px;
+}
+
+
+/* Body */
+
+body{ 
+
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+a{
+    color: #000000;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1em;
+}
+
+
+
+/* Header */
+
+header{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    margin-bottom: 2.5%;
+}
+
+header h1{
+    text-align: left;
+    font-family: serif;
+    font-size: 5em;
+    margin-bottom: .25%;
+ 
+}
+
+#bio{
+    width: 90%;
+    font-size: 2em;
+}
+
+
+header li{
+    display: inline;
+    font-size: 3em;
+    padding-left: 5%;
+
+}
+
+
+
+
+
+/* Main */
+
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+
+main a{
+    font-size: 8em;
+    font-family: serif;
+
+}
+
+main h2{
+    font-size: 7em;
+}
+
+
+/* Videos */
+
+
+.video-detail{
+    float: left;
+    text-align: center;
+}
+
+.video-detail li{
+    list-style: none;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 2em;
+}
+
+.video-detail a{
+    font-size: 2em;
+
+}
+
+.video-detail iframe{
+    border-style: solid;
+    border-width: .25em;
+}
+
+
+/* Contact */
+
+#contact{
+    width: 50%;
+    margin: auto;
+    padding: auto;
+    font-family: sans-serif;
+    font-size: 3em;
+}
+
+
+label{
+    width: 10%;
+
+}
+
+#contact input{
+    display: block;
+    padding-right: 50%;
+    font-size: .5em;
+}
+
+#contact textarea{
+    font-size: .5em;
+    width: 100%;
+    height: 10%;
+}
+
+
