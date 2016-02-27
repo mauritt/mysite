@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^', include('homepage.homepage', namespace = 'homepage')),
     url(r'^videos/', include('videos.urls', namespace='videos')),
+    url(r'^contact/', include('contact.contact', namespace='contact')),
     url(r'^admin/', admin.site.urls),
 ]

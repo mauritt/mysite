@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'videos',
+    'contact'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -123,3 +124,11 @@ STATICFILES_DIRS = (
 )
 
 STATIC_URL = '/static/'
+
+
+
+# email
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+
