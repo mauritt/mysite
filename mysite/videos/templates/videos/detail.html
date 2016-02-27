@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} {{video.title}} {% endblock %}
+{% block content %}
+
+<h2>{{video.title}}</h2>
+<div id = 'large-vid'>
+<iframe src="https://player.vimeo.com/video/{{video.key}}" width="{{video_width}}" height="{{video_height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+    <p>{{video.description}}<p>
+    <ul>
+        <li>ROLES: </li>
+        {% for role in video.roles.all %}
+        <li>{{role.name}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
