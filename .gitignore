@@ -71,3 +71,6 @@ target/
 # OSX
 .DS_Store
 **/.DS_Store
+
+#DB
+**/db.sqlite3
