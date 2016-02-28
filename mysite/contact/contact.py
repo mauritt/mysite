@@ -1,11 +1,12 @@
 import os
-
 from django.conf.urls import url
+from django.utils import timezone
 from django.shortcuts import render
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
+from os.path import expanduser
 
 
 
@@ -23,10 +24,19 @@ def send(request):
     fromWhom = request.POST['name']
 
     msg = MIMEText(message, 'plain')
-    msg['Subject'] = 'Test from %s' % fromWhom
-    msg['To'] = 'mauritt@gmail.com'
+    msg['Subject'] = 'michaelauritt.com: A message from %s' % fromWhom
+    msg['To'] = os.environ.get('EMAIL_HOST_USER')
     frmEmail, frmEmailPassword, frmEmailServer = emailInfo['frmEmailAddress'], emailInfo['frmEmailPassword'],emailInfo['frmEmailServer'] 
+    sentTime = str(timezone.now())
+    log = "%s - %s:\n %s\n"  %(sentTime, msg['Subject'], message)
+    home = expanduser("~")
+    messagePath = home + '/message.txt'
+
+
+    with open(messagePath, 'a') as f:
+        f.write(log)
     
+
     try:
         conn = SMTP_SSL(frmEmailServer)
         conn.login(frmEmail, frmEmailPassword)
