@@ -36,7 +36,7 @@ class Video(models.Model):
     description = models.TextField()
     priority = models.SmallIntegerField()
     roles = models.ManyToManyField(Role)
-    company = models.ForeignKey(Company)
+    company = models.ForeignKey('Company')
     hidden = models.BooleanField()
     slug = models.SlugField(unique=True)
     key = models.IntegerField(unique=True)
