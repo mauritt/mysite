@@ -6,7 +6,9 @@
 <p>My enjoyment of those kinds of technical and creative challenges has also led to a passion for programming and web development. Over the last couple of years, I have been constantly growing as a developer and pushing myself to learn as much as possible about this new world. It’s a set of skills that I am bringing to my current career in video production and something that I hope will lead to future opportunities and challenges.</p>
 </div>
 {% endblock %}
-{% block content %} 
+{% block content %}
+    <h2>My Videos:</h2>
+    <p>Here are a few of the videos I've worked on recently.</p>
     {% for video in videos %}
     <ul class = 'video-detail'>
         <li><iframe src="https://player.vimeo.com/video/{{video.key}}" width="{{video_width}}" height="{{video_height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>
